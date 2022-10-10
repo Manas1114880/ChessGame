@@ -1,4 +1,4 @@
- 
+
 import java.util.*;
 
 public class Board {
@@ -13,16 +13,18 @@ public class Board {
     board = new String[num][num];
     draw();
   }
-  public void draw(){
 
-    for(int i = 0; i <= board.length - 1; i++){
+  public void draw() {
+
+    for (int i = 0; i <= board.length - 1; i++) {
       System.out.println();
-      for(int j = 0; j < board[i].length; j++){
+      for (int j = 0; j < board[i].length; j++) {
         System.out.print("[]");
       }
     }
   }
-  String[][] getBoard(){
+
+  String[][] getBoard() {
     return this.board;
   }
 }

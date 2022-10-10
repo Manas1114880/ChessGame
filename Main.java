@@ -9,6 +9,9 @@ import java.util.*;
 
 https://unicode-table.com/en/sets/chess-symbols/ 
 https://www.youtube.com/watch?v=wZoY2Mg557s
+
+
+
 https://www.youtube.com/watch?v=0zjC6Axn9Ww
 */
 
@@ -26,7 +29,7 @@ class Main {
     }
 
     System.out.println();
-    Piece pawnBlack = new Pawn(symbolList, 2, false);
+    Piece pawnBlack = new Pawn(symbolList, 8, false);
     for (int i = 0; i < 8; i++) {
       System.out.print(pawnBlack.getSymbol());
       pieceGroup.add(pawnBlack);
@@ -37,11 +40,7 @@ class Main {
     Board board = new Board(8, pieceGroup);
     for (int i = 0; i <= board.getBoard().length - 1; i++) {
       for (int j = 0; j < board.getBoard()[i].length; j++) {
-        if (i == 1) {
-          System.out.print(pawnWhite.getSymbol());
-        } else if (i == 7) {
-          System.out.print(pawnBlack.getSymbol());
-        }
+          System.out.print(pieceGroup.get(i));
       }
     }
   }
