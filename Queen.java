@@ -3,8 +3,8 @@ public class Queen extends Piece {
   private int location;
   private boolean whiteOrBlack;
 
-  public Queen(char[] SYMBOL, int location, boolean whiteOrBlack) {
-    super(SYMBOL, location, whiteOrBlack);
+  public Queen(char[] SYMBOL, int location, boolean whiteOrBlack, int x, int y) {
+    super(SYMBOL, location, whiteOrBlack, x, y);
     this.SYMBOL[0] = '♕';
     this.SYMBOL[1] = '♛';
     this.location = location;

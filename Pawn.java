@@ -3,13 +3,17 @@ public class Pawn extends Piece {
   // public char[] SYMBOL;
   private int location;
   private boolean whiteOrBlack;
+  private int x;
+  private int y;
 
-  public Pawn(char[] SYMBOL, int location, boolean whiteOrBlack) {
-    super(SYMBOL, location, whiteOrBlack);
+  public Pawn(char[] SYMBOL, int location, boolean whiteOrBlack, int x, int y) {
+    super(SYMBOL, location, whiteOrBlack, x, y);
     this.SYMBOL[0] = '♙';
     this.SYMBOL[1] = '♟';
     this.location = location;
     this.whiteOrBlack = whiteOrBlack;
+    this.x = x;
+    this.y = y;
   }
 
   public int getLocation() {
@@ -33,5 +37,12 @@ public class Pawn extends Piece {
 
   public void setWhiteOrBlack(boolean whiteOrBlack) {
     this.whiteOrBlack = whiteOrBlack;
+  }
+
+  public int getX(){
+    return x;
+  }
+  public int getY(){
+    return y;
   }
 }
